@@ -14,7 +14,7 @@
           <div class="dash-content">
             <label class="tx-primary" tkey="totalBanked">Total Banked</label>
             <label class="tx-primary" id="depositCoinsPct"></label><BR>
-            <label class="tx-secondary" tkey="totalBankedInfo">Total funds locked in deposits (coming soon)</label>
+            <label class="tx-secondary" tkey="totalBankedInfo">Total funds locked in deposits</label>
             <h2><span id="depositCoins">N/A</span></h2>
           </div><!-- dash-content -->
         </div><!-- col-4 -->
@@ -29,7 +29,7 @@
         <div class="col-lg-4">
           <div class="dash-content dash-small-info">
             <label class="tx-primary" tkey="totalSupply">Total Supply</label>
-            <label class="tx-primary" id="totalCoinsPct">(94%)</label><BR>
+            <label class="tx-primary" id="totalCoinsPct"></label><BR>
             <label class="tx-secondary" tkey="totalSupplyInfo">The total supply minted to date.</label>
             <h2><span id="totalCoins">N/A</span></h2>
           </div><!-- dash-content -->
@@ -37,11 +37,11 @@
       </div><!-- row -->
     </div>
 
-    <div class="nav-statistics-wrapper">
+ <!--   <div class="nav-statistics-wrapper">
       <nav class="nav">
         <a href="" class="nav-link active" tkey="overview">Overview</a>
       </nav>
-    </div><!-- nav-statistics-wrapper -->
+    </div>
 
     <div class="row no-gutters row-statistics mg-b-30" id="networkDiffRow">
       <div class="dasboard-box">
@@ -51,19 +51,19 @@
         <a style="background-color: #222;border: 4px outset #ffef00;color:#ddd !important; border-image: url(/css/themes/gradi.gif) 15 stretch;" data-page="explorer.html" href="#explorer" class="statement-link" tkey="netExplorer">Explore Ledger<i
            class="fa fa-angle-right mg-l-5"></i></a>
         <p class="tx-12"></p>
-      </div><!-- col-5 -->
+      </div>
       <div class="dasboard-box">
         <canvas id="diffAreaChart" height="280"></canvas>
-      </div><!-- col-7 -->
-    </div><!-- row -->
-
+      </div>
+    </div>
+--->
     <hr>
-
+<!--
     <div class="report-summary-header">
       <div>
         <h4 class="tx-white mg-b-3" tkey="netOverallSummary">Overall Network Summary</h4>
       </div>
-    </div><!-- d-flex -->
+    </div> -->
 
     <div class="card card-dash-one mg-t-20">
       <div class="row no-gutters">
@@ -88,13 +88,13 @@
       </div><!-- row -->
     </div>
 
-    <div class="report-summary-header">
+<!----    <div class="report-summary-header">
       <div>
-        <h4 class="tx-white mg-b-3" tkey="miningInfo">Mining info</h4>
+<!--        <h4 class="tx-white mg-b-3" tkey="miningInfo">Mining info</h4>
       </div>
     </div><!-- d-flex -->
 
-    <div class="card card-dash-one mg-t-20">
+<!----    <div class="card card-dash-one mg-t-20">
       <div class="row no-gutters">
         <div class="col-lg-4">
           <div class="dash-content">
@@ -102,13 +102,13 @@
             <h2><span id="currentReward">N/A</span></h2>
           </div><!-- dash-content -->
         </div><!-- col-4 -->
-        <div class="col-lg-4">
+ <!--       <div class="col-lg-4">
           <div class="dash-content dash-small-info">
             <label class="tx-primary" tkey="numOfMiners">Number of Miners</label>
             <h2><span id="numOfMiners">N/A</span></h2>
           </div><!-- dash-content -->
         </div><!-- col-4 -->
-        <div class="col-lg-4">
+  <!--      <div class="col-lg-4">
           <div class="dash-content dash-small-info">
             <label class="tx-primary" tkey="sumPoolsHashrate">Pools speed</label>
             <h2><span id="sumPoolsHashrate">N/A</span></h2>
@@ -118,7 +118,7 @@
     </div>
 
     <hr>
-
+<!---
     <div class="nav-statistics-wrapper mg-t-20">
       <nav class="nav">
         <a href="" class="nav-link active" tkey="markets">Market / Calculator</a>
@@ -126,7 +126,7 @@
     </div><!-- nav-statistics-wrapper -->
 
     <!-- Statistics -->
-    <div id="blockStats" class="card card-dash-one mg-b-20">
+ <!---  <div id="blockStats" class="card card-dash-one mg-b-20">
       <div class="row no-gutters">
         <div class="col-lg-3">
           <div class="dash-content dash-small-info dash-market">
@@ -139,7 +139,7 @@
             </div>
           </div><!-- dash-content -->
         </div><!-- col-3 -->
-        <div class="col-lg-3">
+   <!---     <div class="col-lg-3">
           <div class="dash-content dash-small-info dash-market">
             <div class="info-text">
               <label class="tx-primary" tkey="mktCCXToBTC">XFG to BTC</label>
@@ -150,7 +150,7 @@
             </div>
           </div><!-- dash-content -->
         </div><!-- col-3 -->
-        <div class="col-lg-3">
+<!---        <div class="col-lg-3">
           <div class="dash-content dash-small-info dash-market">
             <div class="info-text">
               <label class="tx-primary" tkey="mktMarketcap">Marketcap</label><label class="tx-primary"
@@ -162,7 +162,7 @@
             </div>
           </div><!-- dash-content -->
         </div><!-- col-3 -->
-        <div class="col-lg-3">
+<!---        <div class="col-lg-3">
           <div class="dash-content dash-small-info dash-market">
             <div class="info-text">
               <label class="tx-primary" tkey="mktDailyVolume">Daily Volume</label>
@@ -174,8 +174,8 @@
           </div><!-- dash-content -->
         </div><!-- col-3 -->
       </div><!-- row -->
-    </div>
-
+    </div> 
+<!---
     <div id="chartMarketPrice">
       <canvas style="height:300px;" id="chartMarketPriceCanvas"></canvas>
       <a class="chart-style"></a>
@@ -365,7 +365,7 @@
   };
 
   function renderLastBlock() {
-    $.getJSON("http://178.128.164.245:18180/getinfo", function (infoData) {
+    $.getJSON("http://188.226.177.187:38383/getinfo", function (infoData) {
       updateText('totalBanked', getReadableCoins2(infoData.full_deposit_amount, 0));
 
       $.ajax({
@@ -433,10 +433,10 @@
         labels: labelData,
         datasets: [{
           data: smooth(diffData, 2),
-          backgroundColor: '#5478ff85',
+          backgroundColor: '#6f2c858f',
           fill: true,
           borderWidth: 0,
-          borderColor: '#0bc0ff'
+          borderColor: '#6f00ff'
         }]
       },
       options: {

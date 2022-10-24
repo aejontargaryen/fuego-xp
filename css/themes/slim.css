@@ -166,7 +166,7 @@ body {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #868ba1;
+  color: lightgray;
   text-align: left;
   background-color:#aea888; }
 
@@ -11982,7 +11982,7 @@ textarea.parsley-success:focus {
     padding: 0;
     margin: 0;
     position: relative;
-    border: 3px outset #02B8FF;/* 
+/*    border: 3px outset #7c00a9;
     border-image-source: url(gradi.gif);
     border-image-outset: 0;
     border-image-repeat: stretch;
@@ -40473,7 +40473,7 @@ body {
 
 .statement-link,
 .nav-statistics-wrapper .nav:first-child .nav-link::before {
-  border-color: #FFD700 !important;
+  border-color: #8e3dff !important;
 }
 
 a {
